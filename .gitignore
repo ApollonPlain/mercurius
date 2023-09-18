@@ -51,3 +51,6 @@
 .env
 .env.prod
 .env.test*
+
+
+.idea
