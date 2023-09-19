@@ -1,0 +1,7 @@
+sylius_fixtures:
+    suites:
+        mercurius_suite:
+            fixtures:
+                locale:
+                    options:
+                        locales: [ 'en_US', 'fr_FR', 'es_ES' ]
