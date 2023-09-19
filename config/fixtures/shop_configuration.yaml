@@ -1,6 +1,11 @@
 sylius_fixtures:
     suites:
         mercurius_suite:
+            listeners:
+                orm_purger: ~
+                images_purger: ~
+                logger: ~
+
             fixtures:
                 locale:
                     options:
@@ -63,3 +68,26 @@ sylius_fixtures:
                                 menu_taxon: 'MENU_CATEGORY'
                                 contact_phone_number: '+33 1 23 45 67 89'
                                 contact_email: 'mercurius@mail.com'
+
+                admin_user:
+                    name: 'admin_user'
+                    options:
+                        custom:
+                            -   email: 'sylius@example.com'
+                                username: 'sylius'
+                                password: 'sylius'
+                                enabled: true
+                                locale_code: '%locale%'
+                                first_name: 'John'
+                                last_name: 'Do'
+                                avatar: '@SyliusCoreBundle/Resources/fixtures/adminAvatars/john.jpg'
+
+                            -   email: 'api@example.com'
+                                username: 'api'
+                                password: 'sylius-api'
+                                enabled: true
+                                locale_code: '%locale%'
+                                first_name: 'Luke'
+                                last_name: 'Brushwood'
+                                api: true
+                                avatar: '@SyliusCoreBundle/Resources/fixtures/adminAvatars/luke.jpg'
