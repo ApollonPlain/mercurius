@@ -7,68 +7,6 @@ sylius_fixtures:
                 logger: ~
             
             fixtures:
-                locale:
-                    options:
-                        locales: [ 'en_US', 'fr_FR', 'es_ES' ]
-                        
-                currency:
-                    options:
-                        currencies:
-                            - 'EUR'
-                            - 'USD'
-                
-                geographical:
-                    options:
-                        countries:
-                            - 'US'
-                            - 'FR'
-                                
-                        zones:
-                            US:
-                                name: 'United States of America'
-                                countries:
-                                    - 'US'
-                            FR:
-                                name: 'France'
-                                countries:
-                                    - 'FR'
-                menu_taxon:
-                    name: taxon
-                    options:
-                        custom:
-                            category:
-                                code: 'MENU_CATEGORY'
-                                name: 'Category'
-                                translations:
-                                    en_US:
-                                        name: 'Category'
-                                    fr_FR:
-                                        name: 'Catégorie'
-
-                channel:
-                    options:
-                        custom:
-                            mercurius:
-                                name: 'Mercurius'
-                                code: 'MERCURIUS'
-                                locales:
-                                    - '%locale%'
-                                currencies:
-                                    - 'EUR'
-                                enabled: true
-#                                hostname: '%env(resolve:SYLIUS_FIXTURES_HOSTNAME)%'
-#                                theme_name: '%env(resolve:SYLIUS_FIXTURES_THEME_NAME)%'
-                                shop_billing_data:
-                                    company: 'Mercurius'
-                                    tax_id: '0000000000001'
-                                    country_code: 'FR'
-                                    street: 'rue Pasteur'
-                                    city: 'Paris'
-                                    postcode: '75001'
-                                menu_taxon: 'MENU_CATEGORY'
-                                contact_phone_number: '+33 1 23 45 67 89'
-                                contact_email: 'mercurius@mail.com'
-
                 admin_user:
                     name: 'admin_user'
                     options:
